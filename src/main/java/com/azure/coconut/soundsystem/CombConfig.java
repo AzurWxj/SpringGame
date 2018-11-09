@@ -1,11 +1,14 @@
 package com.azure.coconut.soundsystem;
 
-import org.springframework.context.annotation.Configuration;
-import org.springframework.context.annotation.Import;
-import org.springframework.context.annotation.ImportResource;
+import org.springframework.context.annotation.*;
 
 @Configuration
 @Import({CDConfig.class,CDPlayerConfig.class})
 @ImportResource("spring-config.xml")
+@EnableAspectJAutoProxy
 public class CombConfig {
+    @Bean
+    public AzureCDPlayerAspect azureCDPlayerAspect(){
+        return new AzureCDPlayerAspect();
+    }
 }

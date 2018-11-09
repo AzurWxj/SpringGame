@@ -1,6 +1,5 @@
 package com.azure.coconut.soundsystem;
 
-import org.springframework.stereotype.Component;
 
 public class AzureCD implements CompactDisc {
     private String artist="Azure Chien";
